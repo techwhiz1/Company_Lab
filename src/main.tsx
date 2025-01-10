@@ -12,9 +12,15 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Router>
             <Routes>
-                {ROUTES.map(({ Path, Component }, index) => {
-                    return <Route key={index} path={Path} element={<Component />} />;
-                })}
+                <Route path={ROUTES.COMPANY.PATH} element={<ROUTES.COMPANY.COMPONENT />} />
+                <Route path={ROUTES.BLOG.PATH} element={<ROUTES.BLOG.COMPONENT />} />
+                <Route path={ROUTES.BLOG.PATH}>
+                    <Route index element={<ROUTES.BLOG.COMPONENT />} />
+                    <Route path={ROUTES.BLOG_ARTICLE.PATH} element={<ROUTES.BLOG_ARTICLE.COMPONENT />} />
+                </Route>
+
+                {/* SERVICES */}
+                <Route path={ROUTES.SERVICES.POC.PATH} element={<ROUTES.SERVICES.POC.COMPONENT />} />
             </Routes>
         </Router>
     </StrictMode>
