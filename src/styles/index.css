@@ -37,3 +37,21 @@
     border-image-source: linear-gradient(130.76deg, #aaaaaa -60.69%, #444444 73.15%);
     border-image-slice: 1;
 }
+
+/*  */
+.scrolling-images {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+  .scrolling-images div {
+    animation: scroll-images 60s linear infinite;
+  }
+  @keyframes scroll-images {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

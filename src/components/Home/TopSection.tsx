@@ -8,6 +8,20 @@ import BottomBgImageSmall from "../../assets/images/home_top_umbrella_point_smal
 import BrandListImage from "../../assets/images/home_brand_list.png";
 import BrandListImageSmall from "../../assets/images/home_brand_list_small.png";
 
+// 
+import Img1 from "../../assets/images/landingpage/1.png"
+import Img2 from "../../assets/images/landingpage/2.png"
+import Img3 from "../../assets/images/landingpage/3.png"
+import Img4 from "../../assets/images/landingpage/4.png"
+import Img5 from "../../assets/images/landingpage/5.png"
+import Img6 from "../../assets/images/landingpage/6.png"
+import Img7 from "../../assets/images/landingpage/7.png"
+import Img8 from "../../assets/images/landingpage/8.png"
+import Img9 from "../../assets/images/landingpage/9.png"
+import Img10 from "../../assets/images/landingpage/10.png"
+import Img11 from "../../assets/images/landingpage/11.png"
+import Img12 from "../../assets/images/landingpage/12.png"
+
 const TopSection = () => {
     return (
         <div className="mt-[2rem] xl:mb-24 lg:mb-24 md:mb-18 mb-[16rem]">
@@ -32,8 +46,49 @@ const TopSection = () => {
                 <div className="absolute left-0 right-0 xl:-bottom-[10rem] lg:-bottom-[8rem] md:bottom-2 -bottom-[16rem]">
                     <img src={BottomBgImage} className="w-full xl:block lg:block md:block hidden" />
                     <img src={BottomBgImageSmall} className="w-full xl:hidden lg:hidden md:hidden block" />
-                    <img src={BrandListImage} className="w-full absolute bottom-10 xl:block lg:block md:block hidden" />
-                    <img src={BrandListImageSmall} className="w-full absolute bottom-0 xl:hidden lg:hidden md:hidden block" />
+                    {/* <img src={BrandListImage} className="w-full absolute bottom-10 xl:block lg:block md:block hidden" />
+                    <img src={BrandListImageSmall} className="w-full absolute bottom-0 xl:hidden lg:hidden md:hidden block" /> */}
+
+                    <div className="w-full absolute bottom-10 xl:flex lg:flex md:flex flex scrolling-images">
+                        <div className="flex gap-32">
+                            <img src={Img1} className="" />
+                            <img src={Img2} className="" />
+                            <img src={Img3} className="" />
+                            <img src={Img4} className="" />
+                            <img src={Img5} className="" />
+                            <img src={Img6} className="" />
+                            <img src={Img7} className="" />
+                            <img src={Img8} className="" />
+                            <img src={Img9} className="" />
+                            <img src={Img10} className="" />
+                            <img src={Img11} className="" />
+                            <img src={Img12} className="" />
+                            <img src={Img1} className="" />
+                            <img src={Img2} className="" />
+                            <img src={Img3} className="" />
+                            <img src={Img4} className="" />
+                            <img src={Img5} className="" />
+                            <img src={Img6} className="" />
+                            <img src={Img7} className="" />
+                            <img src={Img8} className="" />
+                            <img src={Img9} className="" />
+                            <img src={Img10} className="" />
+                            <img src={Img11} className="" />
+                            <img src={Img12} className="" />
+                            <img src={Img1} className="" />
+                            <img src={Img2} className="" />
+                            <img src={Img3} className="" />
+                            <img src={Img4} className="" />
+                            <img src={Img5} className="" />
+                            <img src={Img6} className="" />
+                            <img src={Img7} className="" />
+                            <img src={Img8} className="" />
+                            <img src={Img9} className="" />
+                            <img src={Img10} className="" />
+                            <img src={Img11} className="" />
+                            <img src={Img12} className="" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="h-24"></div>
