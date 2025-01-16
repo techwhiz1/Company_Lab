@@ -48,12 +48,20 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
     const mobileMenuHandler = (menu: string) => {
         toggleMobileMenu();
 
+        if (menu === "Home") {
+            return navigate(ROUTES.HOME.PATH);
+        }
+
         if (menu === "Products") {
             return scrollToOurProducts();
         }
 
         if (menu === "Blog") {
             return navigate(ROUTES.BLOG.PATH);
+        }
+
+        if (menu === "Whitelabel") {
+            return navigate(ROUTES.SOLUTION.WHITELABEL.PATH);
         }
 
         if (menu === "Portfolio") {
@@ -206,14 +214,74 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => mobileMenuHandler("Solutions")} className="text-lg font-light text-white">
+                            <button onClick={() => {setIsSolutionsOpen(!isSolutionsOpen);}} className="text-lg font-light text-white">
                                 Solutions
                             </button>
+
+                            {isSolutionsOpen && (
+                                <ul className="bg-white shadow-lg mt-2 rounded">
+                                    <li
+                                        onClick={() => {
+                                            setIsSolutionsOpen(false);
+                                            toggleMobileMenu();
+                                            desktopMenuHandler("Whitelabel");
+                                        }}
+                                        className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Whitelabel
+                                    </li>
+                                </ul>
+                            )}
                         </li>
                         <li>
-                            <button onClick={() => mobileMenuHandler("Services")} className="text-lg font-light text-white">
+                            <button onClick={() => {setIsServicesOpen(!isServicesOpen)}} className="text-lg font-light text-white">
                                 Services
                             </button>
+
+                            {isServicesOpen && (
+                                <ul className="bg-white shadow-lg mt-2 rounded">
+                                    <li
+                                        onClick={() => {
+                                            setIsServicesOpen(false);
+                                            toggleMobileMenu();
+                                            navigate(ROUTES.SERVICES.POC.PATH);
+                                        }}
+                                        className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        POC
+                                    </li>
+                                    <li
+                                        onClick={() => {
+                                            setIsServicesOpen(false);
+                                            toggleMobileMenu();
+                                            navigate(ROUTES.SERVICES.MVP.PATH);
+                                        }}
+                                        className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        MVP
+                                    </li>
+                                    <li
+                                        onClick={() => {
+                                            setIsServicesOpen(false);
+                                            toggleMobileMenu();
+                                            navigate(ROUTES.SERVICES.FDP.PATH);
+                                        }}
+                                        className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        LIVE
+                                    </li>
+                                    <li
+                                        onClick={() => {
+                                            setIsServicesOpen(false);
+                                            toggleMobileMenu();
+                                            navigate(ROUTES.SERVICES.SUPPORT.PATH);
+                                        }}
+                                        className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Support Service
+                                    </li>
+                                </ul>
+                            )}
                         </li>
                         <li>
                             <button onClick={() => mobileMenuHandler("About Us")} className="text-lg font-light text-white">

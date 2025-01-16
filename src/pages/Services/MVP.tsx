@@ -120,7 +120,7 @@ const MVP = () => {
                     image={MVPHeadingImage}
                 />
                 <WhySection heading="Why MVP is popular?" cardData={whyMVPData} />
-                <HowWeDoSection heading="How We Do PoCs" cardData={howWeMVPData} />
+                <HowWeDoSection heading="How We Do MVPs" cardData={howWeMVPData} />
                 <WhatWillYouGet heading="What You’ll Get" cardData={whatWillYougetData} />
             </WrapperLayout>
             <FormSection />

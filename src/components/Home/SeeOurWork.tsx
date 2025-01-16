@@ -42,7 +42,7 @@ const SeeOurWork = () => {
         <div className="xl:mt-20">
             <WrapperLayout>
                 <p className="text-white xl:text-[4rem] lg:text-[3rem] md:text-[3rem] text-[3rem] text-center mb-[2.5rem]">See Our Work</p>
-                <div className="flex xl:flex-row lg:flex-row md:flex-col flex-col xl:gap-0 lg:gap-0 md:gap-10 gap-8">
+                <div className="flex xl:flex-row lg:flex-row md:flex-col flex-col xl:gap-0 lg:gap-0 md:gap-10 gap-8 overflow-auto utilities no-scrollbar">
                     <div className="xl:w-[80%] lg:w-[80%] md:w-full w-full flex justify-between items-center">
                         {ourWorksData.map(({ id, value }) => {
                             return (

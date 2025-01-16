@@ -19,6 +19,7 @@ const PortfolioProjects = () => {
 
     return (
         <WrapperLayout className="mb-10">
+            <p className="bg-clip-text text-transparent bg-gradient-to-r from-[#999999] via-[#FFFFFF] to-[#999999] text-[3rem] text-center mb-16">Other Project to See</p>
             <div className="grid xl:grid-cols-2 lg:grid-cols-2 gap-x-5 xl:gap-y-12 lg:gap-y-[6rem] md:gap-y-14 gap-y-14">
                 <PortfolioProjectCard
                     image={cardImg6}

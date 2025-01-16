@@ -34,8 +34,8 @@ const OurProducts = () => {
                                 Discover SOLO
                             </button>
                         </div>
-                        <div className="p-[2rem] xl:pt-[2rem] lg:pt-[2rem] md:pt-0 pt-0 xl:w-[60%] lg:w-[60%] md:w-full w-full overflow-hidden flex flex-col xl:justify-end lg:justify-end md:justify-start justify-start">
-                            <div className="rounded-xl overflow-hidden">
+                        <div className="p-[2rem] xl:pt-[2rem] lg:pt-[2rem] md:pt-0 pt-0 xl:w-[60%] lg:w-[60%] md:w-full w-full overflow-hidden flex flex-col xl:justify-start lg:justify-start md:justify-start justify-start">
+                            <div className="rounded-xl ">
                                 <img src={SoloPortfolioImg} className="w-full xl:block lg:block md:hidden hidden" />
                                 <img src={SoloPortfolioSmallImg} className="w-full xl:hidden lg:hidden md:block block" />
                             </div>

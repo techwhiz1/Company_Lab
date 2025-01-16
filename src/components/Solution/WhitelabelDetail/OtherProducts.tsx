@@ -57,7 +57,7 @@ const OtherProducts = () => {
         <div className="mt-16">
             <WrapperLayout>
                 <p className="text-white font-normal text-[2.5rem] mb-[1.5rem]">See Other Whitelabel Products</p>
-                <div className="flex flex-nowrap overflow-x-scroll gap-5 p-1">
+                <div className="flex flex-nowrap overflow-x-scroll no-scrollbar gap-5 p-1">
                     {productData.map(({ id, title, desc, logo }) => {
                         return (
                             <div

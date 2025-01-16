@@ -65,7 +65,7 @@ const FormSection: FC<Props> = ({ className = "" }) => {
 
                         <div className="w-full flex justify-end col-span-2">
                             <button className="bg-white text-black font-medium text-[1.125rem] rounded-lg w-fit py-[0.5rem] px-[4rem] mt-[4rem]">
-                                Enquire POC
+                                Send
                             </button>
                         </div>
                     </div>
