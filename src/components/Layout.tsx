@@ -2,7 +2,8 @@ import { FC, ReactNode, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // IMAGES
-import bgImage from "../assets/images/gradLight.png";
+// import bgImage from "../assets/images/gradLight.png";
+import bgImage from "../assets/images/render@512p-25fps.gif";
 
 const Layout: FC<Props> = ({ children }) => {
     const { pathname } = useLocation();

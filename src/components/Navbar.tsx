@@ -102,13 +102,13 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                         <img src={bottomArrow} className="mt-1 cursor-pointer" />
                     </div>
                     {isSolutionsOpen && (
-                        <ul className="absolute bg-white shadow-lg mt-2 rounded">
+                        <ul className="absolute bg-[rgba(0,0,0,0.2)] backdrop-filter backdrop-blur-lg shadow-lg mt-2 rounded">
                             <li
                                 onClick={() => {
                                     setIsSolutionsOpen(false);
                                     desktopMenuHandler("Whitelabel");
                                 }}
-                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 text-white"
                             >
                                 Whitelabel
                             </li>
@@ -137,13 +137,13 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                         <img src={bottomArrow} className="mt-1 cursor-pointer" />
                     </div>
                     {isServicesOpen && (
-                        <ul className="absolute bg-white shadow-lg mt-2 rounded">
+                        <ul className="absolute bg-[rgba(0,0,0,0.2)] backdrop-filter backdrop-blur-lg text-white shadow-lg mt-2 rounded">
                             <li
                                 onClick={() => {
                                     setIsServicesOpen(false);
                                     navigate(ROUTES.SERVICES.POC.PATH);
                                 }}
-                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 "
                             >
                                 POC
                             </li>
@@ -186,8 +186,8 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                 </button>
 
                 {/* Contact Button */}
-                <button className="border-[1px] rounded-md border-white text-white px-5 py-1  hover:bg-[#4A47A3] hover:text-white transition duration-300">
-                    Contact
+                <button className="border-[1px] rounded-xl border-white text-white px-3.5 py-1  hover:bg-[#4A47A3] hover:text-white transition duration-300">
+                    Contact Us
                 </button>
             </div>
 
@@ -294,8 +294,8 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                             </button>
                         </li>
                         <li>
-                            <button className="border-[1px] border-white text-white px-4 py-2 rounded hover:bg-[#4A47A3] hover:text-white transition duration-300">
-                                Contact
+                            <button className="border-[1px] border-white text-white px-3 py-2 rounded-xl hover:bg-[#4A47A3] hover:text-white transition duration-300">
+                                Contact Us
                             </button>
                         </li>
                     </ul>
