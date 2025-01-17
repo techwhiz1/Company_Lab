@@ -14,7 +14,7 @@ const FormSection: FC<Props> = ({ className = "" }) => {
         <div className={`${className} w-full relative mt-[10rem] flex justify-center items-center mb-20`}>
             <img src={FormBGLeftImage} className="absolute top-0 left-0 mt-[10rem]" />
             <div className="z-10 w-full xl:px-[8rem] lg:px-[4rem] md:px-[3rem] px-[1rem]">
-                <div className="bg-[#202020] p-[2rem] rounded-lg border-[1px] border-[#808080]">
+                <div className="bg-[#202020] p-[2rem] rounded-lg border-[1px] border-[#808080]" id="ContactUs">
                     <div className="mb-[1.5rem]">
                         <p className="text-white font-medium text-[2rem] mb-[1rem]">Let’s Turn Your Ideas Into Reality</p>
                         <p className="text-[#EAEAEA] text-[1.125rem] font-extralight">

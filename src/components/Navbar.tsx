@@ -8,7 +8,7 @@ import ROUTES from "../navigation/routes";
 import logo from "../assets/images/logo.png"; // Adjust the path as needed
 import bottomArrow from "../assets/images/bottomArrow.png";
 
-const Navbar = ({ scrollToOurProducts = () => {} }) => {
+const Navbar = ({ scrollTo = (moveId: string) => { console.log(moveId) } }) => {
     const navigate = useNavigate();
 
     // STATES
@@ -26,7 +26,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
         }
 
         if (menu === "Products") {
-            return scrollToOurProducts();
+            return scrollTo("ourProducts");
         }
 
         if (menu === "Blog") {
@@ -43,6 +43,10 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
 
         if (menu === "About Us") {
             return navigate(ROUTES.COMPANY.PATH);
+        }
+
+        if (menu === "Contact Us") {
+            return scrollTo("ContactUs");
         }
     };
     const mobileMenuHandler = (menu: string) => {
@@ -53,7 +57,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
         }
 
         if (menu === "Products") {
-            return scrollToOurProducts();
+            return scrollTo("ourProducts");
         }
 
         if (menu === "Blog") {
@@ -71,10 +75,14 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
         if (menu === "About Us") {
             return navigate(ROUTES.COMPANY.PATH);
         }
+
+        if (menu === "Contact Us") {
+            return scrollTo("ContactUs");
+        }
     };
 
     return (
-        <nav className="py-4 xl:px-[8rem] lg:px-[4rem] md:px-[3rem] px-[1rem] fixed w-full top-0 z-50 flex justify-between items-center backdrop-filter backdrop-blur-lg">
+        <nav className="py-4 xl:px-[8rem] lg:px-[4rem] md:px-[3rem] px-[1rem] absolute w-full top-0 z-50 flex justify-between items-center backdrop-filter backdrop-blur-lg">
             {/* Logo with Text */}
             <div className="flex items-center">
                 <img onClick={() => desktopMenuHandler("Home")} src={logo} alt="Logo" className="cursor-pointer h-9 w-30" />
@@ -137,7 +145,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                         <img src={bottomArrow} className="mt-1 cursor-pointer" />
                     </div>
                     {isServicesOpen && (
-                        <ul className="absolute bg-[rgba(0,0,0,0.2)] backdrop-filter backdrop-blur-lg text-white shadow-lg mt-2 rounded">
+                        <ul className="absolute bg-[rgba(0,0,0,0.2)] backdrop-filter backdrop-blur-lg text-white shadow-lg mt-2 w-40 -left-4 rounded">
                             <li
                                 onClick={() => {
                                     setIsServicesOpen(false);
@@ -145,14 +153,14 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                                 }}
                                 className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 "
                             >
-                                POC
+                                Proof of Concept
                             </li>
                             <li
                                 onClick={() => {
                                     setIsServicesOpen(false);
                                     navigate(ROUTES.SERVICES.MVP.PATH);
                                 }}
-                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2"
                             >
                                 MVP
                             </li>
@@ -161,16 +169,16 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                                     setIsServicesOpen(false);
                                     navigate(ROUTES.SERVICES.FDP.PATH);
                                 }}
-                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2"
                             >
-                                LIVE
+                                Full Deployment
                             </li>
                             <li
                                 onClick={() => {
                                     setIsServicesOpen(false);
                                     navigate(ROUTES.SERVICES.SUPPORT.PATH);
                                 }}
-                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2 hover:bg-gray-100"
+                                className="text-[1.1rem] cursor-pointer text-sm px-4 py-2"
                             >
                                 Support Service
                             </li>
@@ -186,7 +194,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                 </button>
 
                 {/* Contact Button */}
-                <button className="border-[1px] rounded-xl border-white text-white px-3.5 py-1  hover:bg-[#4A47A3] hover:text-white transition duration-300">
+                <button onClick={() => desktopMenuHandler("Contact Us")} className="border-[1px] rounded-xl border-white text-white px-3.5 py-1  hover:bg-[#4A47A3] hover:text-white transition duration-300">
                     Contact Us
                 </button>
             </div>
@@ -214,7 +222,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => {setIsSolutionsOpen(!isSolutionsOpen);}} className="text-lg font-light text-white">
+                            <button onClick={() => { setIsSolutionsOpen(!isSolutionsOpen); }} className="text-lg font-light text-white">
                                 Solutions
                             </button>
 
@@ -234,7 +242,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                             )}
                         </li>
                         <li>
-                            <button onClick={() => {setIsServicesOpen(!isServicesOpen)}} className="text-lg font-light text-white">
+                            <button onClick={() => { setIsServicesOpen(!isServicesOpen) }} className="text-lg font-light text-white">
                                 Services
                             </button>
 
@@ -294,7 +302,7 @@ const Navbar = ({ scrollToOurProducts = () => {} }) => {
                             </button>
                         </li>
                         <li>
-                            <button className="border-[1px] border-white text-white px-3 py-2 rounded-xl hover:bg-[#4A47A3] hover:text-white transition duration-300">
+                            <button onClick={() => mobileMenuHandler("Contact Us")} className="border-[1px] border-white text-white px-3 py-2 rounded-xl hover:bg-[#4A47A3] hover:text-white transition duration-300">
                                 Contact Us
                             </button>
                         </li>

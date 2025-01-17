@@ -49,9 +49,8 @@ const SeeOurWork = () => {
                                 <p
                                     key={id}
                                     onClick={() => selectWorkHandler(id)}
-                                    className={`${
-                                        selectedWork === id ? "text-white border-b-2 border-b-[#4AB4FF]" : "text-[#969696]"
-                                    } xl:text-[1.125rem] lg:text-[1.125rem] md:text-[1rem] p-[0.6rem] cursor-pointer`}
+                                    className={`${selectedWork === id ? "text-white border-b-2 border-b-[#4AB4FF]" : "text-[#969696]"
+                                        } xl:text-[1.125rem] lg:text-[1.125rem] md:text-[1rem] p-[0.6rem] cursor-pointer`}
                                 >
                                     {value}
                                 </p>
@@ -66,7 +65,14 @@ const SeeOurWork = () => {
                 </div>
                 <div className="flex xl:flex-row lg:flex-row md:flex-col-reverse flex-col-reverse min-h-[31.188rem] mt-[4rem] mb-[4rem] gap-10">
                     <div className="flex flex-col justify-center xl:w-[50%] lg:w-[50%] md:w-full">
-                        <p className="text-[2rem] text-white">Achieved $2.3M revenue and 2.000+ wallet participation.</p>
+                        <p className="text-[2rem] font-medium text-white">
+                            Achieved{" "}
+                            <span
+                                className="bg-gradient-to-r from-[#63E2FF] via-[#FFD154] to-[#63E2FF]  bg-clip-text text-transparent"
+                            >
+                                $2.3M revenue and 2,000+ wallet
+                            </span>{" "}participation.
+                        </p>
                         <p className="text-[#F0F0F0] text-[1.125rem] font-extralight mt-[1.5rem]">
                             Fireflies was built in 3 months by our team which blends Web3 innovation with secure, seamless travel solutions.
                             Generating $2.3M in revenue, 98% user satisfaction, and 2000+ wallet participation.

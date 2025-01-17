@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // COMPONENTS
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
@@ -14,9 +15,9 @@ import WhatTheySay from "../components/Home/WhatTheySay";
 
 const Home = () => {
     // FUNCTIONS
-    const scrollToOurProducts = () => {
+    const scrollTo = (moveId: string) => {
         function findPosition() {
-            let obj: any = document.getElementById("ourProducts");
+            let obj: any = document.getElementById(moveId);
             let currenttop = 0;
             if (obj.offsetParent) {
                 do {
@@ -32,7 +33,7 @@ const Home = () => {
 
     return (
         <Layout>
-            <Navbar scrollToOurProducts={scrollToOurProducts} />
+            <Navbar scrollTo={scrollTo} />
             <TopSection />
             <SeeOurWork />
             <SuitesYourNeeds />
